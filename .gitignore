@@ -59,9 +59,3 @@ typings/
 *.njsproj
 *.sln
 *.sw?
-
-# SQLite database file
-database/contact_messages.db
-
-# Exclude any custom generated assets (if any)
-public/images/
