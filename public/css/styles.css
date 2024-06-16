@@ -1,37 +1,3 @@
-body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(to right, #ff9966, #ff5e62);
-    color: white;
-    margin: 0;
-    padding: 0;
-}
-
-header, footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 1em 0;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.5em;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-.container {
-    padding: 20px;
-    text-align: center;
-}
 
 .lineup img, .stages img {
     width: 100%;
@@ -64,4 +30,79 @@ form button {
 
 form button:hover {
     background: #555;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #ff9966, #ff5e62);
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    padding: 50px;
+    text-align: center;
+    background: url('/images/festival_bg.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 80%;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.5em;
+}
+
+.container .highlights {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container .highlights div {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 80%;
+}
+
+.container .highlights div h3 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.container .highlights div p {
+    margin: 10px 0 0;
+    font-size: 1.2em;
 }

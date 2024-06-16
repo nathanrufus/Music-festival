@@ -6,7 +6,7 @@ const sqlite3 = require('sqlite3').verbose();
 const app = express();
 const db = new sqlite3.Database('./database/contact_messages.db');
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));  // Serve static files
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 
