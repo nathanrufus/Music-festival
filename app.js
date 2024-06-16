@@ -1,7 +1,10 @@
 const express = require('express');
-const app = express();
 const path = require('path');
 const bodyParser = require('body-parser');
+const sqlite3 = require('sqlite3').verbose();
+
+const app = express();
+const db = new sqlite3.Database('./database/contact_messages.db');
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
@@ -28,8 +31,13 @@ app.get('/contact', (req, res) => {
 });
 
 app.post('/contact', (req, res) => {
-    // Process the form data here
-    res.redirect('/');
+    const { name, email, message } = req.body;
+    db.run('INSERT INTO messages (name, email, message) VALUES (?, ?, ?)', [name, email, message], (err) => {
+        if (err) {
+            return console.error(err.message);
+        }
+        res.redirect('/contact');
+    });
 });
 
 const PORT = process.env.PORT || 5000;
